@@ -8,7 +8,7 @@ export class AdminPage extends BasePage{
     }
 
     async verifyAdminPageHeadingIsVisible(){
-        await this.basePageVerifyElementIsVisible(this.verifyAdminPageHeading);
+        await expect(this.verifyAdminPageHeading).toBeVisible();
     }
 
     async navigatetoInvoicePage(){

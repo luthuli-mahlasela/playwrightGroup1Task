@@ -1,4 +1,4 @@
-import { Locator } from "@playwright/test";
+import { expect, Locator } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
 
@@ -10,7 +10,7 @@ export class HomePage extends BasePage{
     }
 
     async homePageVerifyHeadingIsVisible(){
-        await this.basePageVerifyElementIsVisible(this.verifyHomePageHeading);
+        await expect(this.verifyHomePageHeading).toBeVisible();
     }
 
     async navigateToAdminPage(){
